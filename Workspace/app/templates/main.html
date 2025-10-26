@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- / -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicons/home.svg') }}">
+    <!-- / -->
+    <title>Inicio</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{url_for('main')}}">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Bootstrap" width="60"
+                        height="auto" style="padding: 0; margin: 0;">
+                    PORTAFOLIO
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">INICIO
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <a type="button" class="btn btn-secondary" href="{{ url_for('login') }}">Iniciar Sesion</a>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ url_for('main') }}">| Home |</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url_for('about_me')}}">Sobre mi</a>
+                                <a class="nav-link" href="{{url_for('personal')}}">Personal</a>
+                                <a class="nav-link" href="{{url_for('course')}}">Trayecto</a>
+                                <a class="nav-link" href="{{url_for('projects')}}">Proyectos</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <div class="profile"></div>
+        <article>
+            <header>
+                <h1>
+                    <div class="headline-1">
+                        Stasyszyn Parisi
+                    </div>
+                    <div class="headline-2">
+                        Nicolas
+                    </div>
+                </h1>
+                <p class="subheading">
+                    Portafolio Oficial
+                </p>
+            </header>
+            <hr />
+            <section style="height: 500px;">
+                <h1 style="padding-top: 0;">DATOS</h1>
+                <ul class="texts">
+                    <p>Numero de Identificacación: 47820188</p>
+                    <p>Nacimiento: 14 | 03 | 2008</p>
+                    <p>Estado Civil: soltero</p>
+                    <p>Genero: Masculino</p>
+                    <p>Nacionalidad: Argentina</p>
+                    <p>Localidad: Córdoba</p>
+                    <p>Direccion Actual: Los Molinos, Rimini 67</p>
+                </ul>
+            </section>
+            <hr />
+            <section style="height: 500px;">
+                <h1>Información</h1>
+                <p class="texts">Nací en Córdoba en el año 2008 desde chico me gusta todo lo relacionado con la
+                    tecnología y por eso
+                    dedico mi tiempo a la programación Full Stack, además de la edición y creación audiovisual. El arte
+                    es algo que me apasiona, sobre todo si se habla de cine o música, hobbies que son parte de mi vida.
+                    <br>
+                    Me considero alguien honesto, responsable, decidido y organizado; el trabajo en equipo no es algo en
+                    lo que estoy familiarizado, me muevo mucho mejor solo tomando mis propias responsabilidades y
+                    solucionando mis problemas.
+                </p>
+            </section>
+            <section>
+                <h1>Gustos</h1>
+                <h2>Musica</h2>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='/images/PR_logo.jpg')}}"
+                                alt="Patricio Rey y Sus Redonditos De Ricota">
+                        </div>
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='/images/S_logo.jpg')}}" alt="Sumo">
+                        </div>
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='/images/LP_logo.jpg')}}" alt="Los Piojos">
+                        </div>
+                        <div class="col"> <img src="{{ url_for('static', filename='/images/LR_logo.jpg')}}"
+                                alt="La Renga"></div>
+                    </div>
+                </div>
+                <h2>Peliculas</h2>
+                <div class="container text-center">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='/images/taxidriver_poster.jpg')}}"
+                                alt="Taxi Driver">
+                        </div>
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='/images/pulpfiction_poster.jpg')}}"
+                                alt="Pulp Fiction">
+                        </div>
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='/images/memento_poster.jpg')}}" alt="Memento">
+                        </div>
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='/images/scareface_poster.jpg')}}" alt="Sacreface">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+
+    <div class="footer-basic">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="{{url_for('main')}}">Home</a></li>
+                <li class="list-inline-item"><a href="{{url_for('about_me')}}">Sobre mi</a></li>
+                <li class="list-inline-item"><a href="{{url_for('personal')}}">Personal</a></li>
+                <li class="list-inline-item"><a href="{{url_for('course')}}">Trayecto</a></li>
+                <li class="list-inline-item"><a href="{{url_for('projects')}}">Proyectos</a></li>
+            </ul>
+            <ul>
+                <p style="font-size: 20px; font-weight: bold; margin-bottom: 0; margin-top: 30px;">MAIL</p>
+                <a href="mailto:messier57lyr@gmail.com"
+                    target="mailto:messier57lyr@gmail.com">messier57lyr@gmail.com</a>
+            </ul>
+            <ul>
+                <p style="font-size: 20px; font-weight: bold; margin-bottom: 0; margin-top: 30px;">TELEFONO</p>
+                <a href="tel:+5493513153728">+54 9 351 315-3728</a>
+            </ul>
+            <p class="copyright">PORTAFOLIO | STASYSZYN </p>
+        </footer>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
