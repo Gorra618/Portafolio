@@ -40,7 +40,7 @@ const getOptionChart1 = () => {
                     length2: 20
                 },
                 itemStyle: {
-                    color: '#c23531',
+                    color: '#ffffffff',
                     shadowBlur: 200,
                     shadowColor: 'rgba(0, 0, 0, 0.5)'
                 },
@@ -78,19 +78,16 @@ const getOptionChart2 = () => {
             min: 0,
             max: 1000,
             text: ['High Score', 'Low Score'],
-            // Map the score column to color
             dimension: 0,
             inRange: {
-                color: ['#000000ff', '#970000ff', '#ff0000ff']
+                color: ['#000000ff', '#818181ff', '#ffffffff']
             }
         },
         series: [
             {
                 type: 'bar',
                 encode: {
-                    // Map the "amount" column to X axis.
                     x: 'amount',
-                    // Map the "product" column to Y axis
                     y: 'product'
                 }
             }
