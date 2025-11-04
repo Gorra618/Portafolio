@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- / -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicons/projects.svg') }}">
@@ -16,7 +16,7 @@
 
 <body>
     <!-- NAVBAR -->
-        <input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" />
+    <input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" />
     <label for="page-nav-toggle">
         <svg class="icon--menu-toggle" viewBox="0 0 60 30">
             <g class="icon-group">
@@ -45,7 +45,104 @@
 
     <!-- MAIN -->
     <main class="main_page">
+        <section>
+            <div class="head">
+                <h2>Mis proyectos</h2>
 
+                <div class="controls">
+                    <button id="prev" class="nav-btn" aria-label="Prev">‹</button>
+                    <button id="next" class="nav-btn" aria-label="Next">›</button>
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="track" id="track">
+
+                    <article class="project-card" active>
+                        <img class="project-card__bg" src="{{url_for('static', filename='/images/wp1.jpg')}}" alt="">
+                        <div class="project-card__content">
+                            <img class="project-card__thumb" src="{{url_for('static', filename='/images/wf1.jpg')}}"
+                                alt="">
+                            <div>
+                                <h3 class="project-card__title">Copa Renault</h3>
+                                <p class="project-card__desc">Una app web para la copa renault de 2026.</p>
+                                <a href="https://github.com/Gorra618/Copa_Renault.git" target="_blank">
+                                    <button class="project-card__btn">Ver</button>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img class="project-card__bg"
+                            src="" alt="">
+                        <div class="project-card__content">
+                            <img class="project-card__thumb"
+                                src="https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-marketer.webp?w=480"
+                                alt="">
+                            <div>
+                                <h3 class="project-card__title">El Fenomeno</h3>
+                                <p class="project-card__desc">Video sobre la fenomenologia de Heidegger para filosofia.
+                                </p>
+                                <a href="https://drive.google.com/file/d/1-8bwzYJDCwyxivstuC79wjkce77D9Dsa/view?usp=sharing"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <button class="project-card__btn">Ver</button>
+                                </a>    
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img class="project-card__bg"
+                            src="https://cdn-front.freepik.com/home/anon-rvmp/professionals/filmmakers.webp" alt="">
+                        <div class="project-card__content">
+                            <img class="project-card__thumb"
+                                src="https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-film.webp?w=480"
+                                alt="">
+                            <div>
+                                <h3 class="project-card__title">VFX filmmakers</h3>
+                                <p class="project-card__desc">From concept to cut, faster.</p>
+                                <button class="project-card__btn">Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img class="project-card__bg"
+                            src="https://cdn-front.freepik.com/home/anon-rvmp/professionals/content-creators.webp"
+                            alt="">
+                        <div class="project-card__content">
+                            <img class="project-card__thumb"
+                                src="https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-content.webp?w=480"
+                                alt="">
+                            <div>
+                                <h3 class="project-card__title">Content creators</h3>
+                                <p class="project-card__desc">Make scroll-stopping content, easily.</p>
+                                <button class="project-card__btn">Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img class="project-card__bg"
+                            src="https://cdn-front.freepik.com/home/anon-rvmp/professionals/art-directors.webp" alt="">
+                        <div class="project-card__content">
+                            <img class="project-card__thumb"
+                                src="https://cdn-front.freepik.com/home/anon-rvmp/professionals/img-art.webp?w=480"
+                                alt="">
+                            <div>
+                                <h3 class="project-card__title">Art directors</h3>
+                                <p class="project-card__desc">Creative control at every stage.</p>
+                                <button class="project-card__btn">Details</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="dots" id="dots"></div>
+        </section>
     </main>
 
     <!-- FOOTER -->
@@ -73,6 +170,7 @@
 
 
     <!-- SCRIPTS -->
+    <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
