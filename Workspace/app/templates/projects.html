@@ -76,8 +76,7 @@
                     <article class="project-card">
                         <img class="project-card__bg" src="{{url_for('static', filename='images/wp2.jpg')}}" alt="">
                         <div class="project-card__content">
-                            <img class="project-card__thumb"
-                                src="{{url_for('static', filename='images/wf2.png')}}"
+                            <img class="project-card__thumb" src="{{url_for('static', filename='images/wf2.png')}}"
                                 alt="">
                             <div>
                                 <h3 class="project-card__title">El Fenomeno</h3>
@@ -92,11 +91,9 @@
                     </article>
 
                     <article class="project-card">
-                        <img class="project-card__bg"
-                            src="{{url_for('static', filename='/images/wp3.jpg')}}" alt="">
+                        <img class="project-card__bg" src="{{url_for('static', filename='/images/wp3.jpg')}}" alt="">
                         <div class="project-card__content">
-                            <img class="project-card__thumb"
-                                src="{{url_for('static', filename='/images/wf3.png')}}"
+                            <img class="project-card__thumb" src="{{url_for('static', filename='/images/wf3.png')}}"
                                 alt="">
                             <div>
                                 <h3 class="project-card__title">EL Caprino</h3>
@@ -113,6 +110,29 @@
 
             <div class="dots" id="dots"></div>
         </section>
+        <section class="container mt-5">
+            <h2>Mis Trabajos</h2>
+
+            <a href="{{ url_for('add_trabajo') }}">
+                <button class="btn btn-primary mt-3 mb-3">+ Agregar trabajo</button>
+            </a>
+
+            <ul class="list-group">
+                {% for t in trabajos %}
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>
+                        <strong>{{ t.titulo }}</strong><br>
+                        <small>{{ t.descripcion }}</small>
+                    </div>
+
+                    <a href="{{ url_for('delete', id=t.id) }}" onclick="return confirm('¿Eliminar este trabajo?');">
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
